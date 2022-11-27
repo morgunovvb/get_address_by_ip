@@ -6,7 +6,7 @@ def get_info_by_ip(ip='127.0.0.1'):
         response = requests.get(url=f'http://ip-api.com/json/{ip}').json()
         print(response)
     except requests.exceptions.ConnectionError:
-        print('Нет соединения с интернетом')
+        print('No internet connection')
 
 def main():
     ip = input('Enter your ip-adress: ')
